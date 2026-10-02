@@ -37,16 +37,16 @@ Extract sub-graphs, sufficiently small to be displayed
 ### Examples
 
 <figure>
-   <img src="Figures/PATH_ELCNUC_TRT.png" alt="PATH_ELCNUC_TRT" />   
+   <img src="images/PATH_ELCNUC_TRT.png" alt="PATH_ELCNUC_TRT" />   
     <figcaption  class="figure-caption text-center">resx path ELCNUC TRT</figcaption>
 </figure>
 
 <figure>
-   <img src="Figures/CCUMET.png" alt="CCUMET" />   
+   <img src="images/CCUMET.png" alt="CCUMET" />   
     <figcaption  class="figure-caption text-center">resx sector CCUMET</figcaption>
 </figure>
 
 <figure>
-   <img src="Figures/BIORES.png" alt="BIORES" />   
+   <img src="images/BIORES.png" alt="BIORES" />   
     <figcaption  class="figure-caption text-center">neighbours --up 8 --down 0 BIOSLD BIOLIG BIOOIL BIOCRP BIOTOR BIOPEL</figcaption>
 </figure>

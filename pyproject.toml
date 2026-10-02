@@ -1,24 +1,28 @@
-[tool.poetry]
+[project]
 name = "resx"
 version = "0.0.4"
 description = "RES Explorer: VDT files postprocessing"
 authors = [
-"Lucas Desport <lucas.desport@minesparis.psl.eu>",
-"Damien Corral <damien.corral@minesparis.psl.eu>",
-"Jean-Paul Marmorat <jean-paul.marmorat@minesparis.psl.eu>",
+    { name = "Lucas Desport", email = "lucas.desport@minesparis.psl.eu" },
+    { name = "Damien Corral", email = "damien.corral@minesparis.psl.eu" },
+    { name = "Jean-Paul Marmorat", email = "jean-paul.marmorat@minesparis.psl.eu" },
 ]
 readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pandas>=2.2",
+    "click>=8.1",
+    "networkx>=3.3",
+    "gravis>=0.1",
+    "setuptools<80",
+]
 
-[tool.poetry.scripts]
-resx  = "resx .console:cli"
-
-[tool.poetry.dependencies]
-python = "^3.10"
-pandas = ">=1.5.3"
-click = "^8.1.3"
-networkx = "^3.3"
-gravis = "^0.1.0"
+[project.scripts]
+resx  = "resx.console:cli"
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["resx"]

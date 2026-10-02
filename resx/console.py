@@ -16,7 +16,6 @@ import pandas as pd
 import numpy as np
 import re
 
-__version__ = '0.0.4'
 default_xml = 'current-RES.xml'
 sub_command = ' '.join(sys.argv[1:]) 
 MAX_NODES=500
@@ -129,7 +128,7 @@ class OrderCommands(click.Group):
     return list(self.commands)
 
 @click.group(cls=OrderCommands)
-@click.version_option(__version__) 
+@click.version_option() 
 def cli():
     '''RES Explorer: build RES from VDT file, extract subgraphs.''' 
     pass
