@@ -1,6 +1,6 @@
 [project]
 name = "resx"
-version = "0.0.4"
+version = "0.1.0"
 description = "RES Explorer: VDT files postprocessing"
 authors = [
     { name = "Lucas Desport", email = "lucas.desport@minesparis.psl.eu" },
