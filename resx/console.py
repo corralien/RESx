@@ -16,8 +16,7 @@ import pandas as pd
 import numpy as np
 import re
 
-__version__ = '0.0.4'
-default_xml = 'current-RES.xml'
+default_xml = 'current-RES.graphml'
 sub_command = ' '.join(sys.argv[1:]) 
 MAX_NODES=500
 
@@ -121,7 +120,7 @@ def out(GX, G):
     GX.nodes["Title"]['type'] =  'title'   
 
     gv.d3(GX, node_label_size_factor=0.5).display()
-    nx.write_graphml(GX, 'GX.xml',  named_key_ids=True)    
+    nx.write_graphml(GX, 'GX.graphml',  named_key_ids=True)    
     
 # CLI SECTION
 class OrderCommands(click.Group):
@@ -129,7 +128,7 @@ class OrderCommands(click.Group):
     return list(self.commands)
 
 @click.group(cls=OrderCommands)
-@click.version_option(__version__) 
+@click.version_option() 
 def cli():
     '''RES Explorer: build RES from VDT file, extract subgraphs.''' 
     pass
